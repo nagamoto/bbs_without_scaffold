@@ -1,0 +1,14 @@
+<%= form_for(@my_comment, :url => {:action => 'create'}) do |f| %>
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :overview %><br>
+    <%= f.text_field :overview %>
+  </div>
+    <%= f.hidden_field :my_thread_id, :value => @my_thread_id %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

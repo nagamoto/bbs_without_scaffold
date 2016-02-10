@@ -1,0 +1,14 @@
+<h1>Editing My Comment</h1>
+<%= form_for(@my_comment, :url => {:action => 'update'}) do |f| %>
+  <div class="field">
+    <%= f.label :overview %><br>
+    <%= f.text_field :overview %>
+  </div>
+    <%= f.hidden_field :my_thread_id, :value => @my_thread_id %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Show', @my_comment %> |
+<%= link_to 'Back', my_thread_path(@my_thread_id) %>
